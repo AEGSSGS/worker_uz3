@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { CiHome } from "react-icons/ci";
 import { MdHistory } from "react-icons/md";
 import { CiUser } from "react-icons/ci";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Royxat() {
     const [isCompleteScreen, setisCompleteScreen] = useState(false);
@@ -10,6 +10,15 @@ export default function Royxat() {
     const [newTitle, setnewTitle] = useState("");
     const [newDescription, setnewDescription] = useState("");
     const [count, setCount] = useState(0);
+    const navigate = useNavigate();
+
+    // Загрузка данных из localStorage при загрузке компонента
+    useEffect(() => {
+        const storedTodos = localStorage.getItem('todolist');
+        if (storedTodos) {
+            setTodos(JSON.parse(storedTodos));
+        }
+    }, []);
 
     const handleaddtodo = () => {
         var newTodoItem = {
@@ -21,10 +30,17 @@ export default function Royxat() {
         var updatedTodoArr = [...allTodos];
         updatedTodoArr.push(newTodoItem);
         setTodos(updatedTodoArr);
-        setnewDescription(""); // Yangilash
-        localStorage.setItem('todolist', JSON.stringify(updatedTodoArr));
+        setnewDescription(""); // Очистить поле
+        localStorage.setItem('todolist', JSON.stringify(updatedTodoArr)); // Сохранить в localStorage
     };
+
     const totalJobs = allTodos.length;
+
+    const handleSave = () => {
+        // Сохранение данных в localStorage
+        localStorage.setItem('todolist', JSON.stringify(allTodos));
+        navigate('/Saqlangan_ishlar'); // Переход на страницу Saqlangan_ishlar
+    };
 
 
 
@@ -49,14 +65,14 @@ export default function Royxat() {
 
                                 </div>
                                 <div className="grid  place-items-center grid-cols-2 place-content-between gap-[23px]">
-                                    
-                                        <input type="number" value={newDescription} onChange={(e) => setnewDescription(e.target.value)} placeholder='Soni' className=' py-[10px] w-full text-center bg-[#F3F3F4] rounded-[8px]' required />
-                                    
-                                    
-                                        <button type='submit' onClick={handleaddtodo} className='PrimaryBtn inline-block bg-[#00A3FF]  py-[10px] w-full text-center text-[16px] font-normal leading-[19px] text-[#fff] rounded-[8px]'>
-                                            Qoshish
-                                        </button>
-                                    
+
+                                    <input type="number" value={newDescription} onChange={(e) => setnewDescription(e.target.value)} placeholder='Soni' className=' py-[10px] w-full text-center bg-[#F3F3F4] rounded-[8px]' required />
+
+
+                                    <button type='submit' onClick={handleaddtodo} className='PrimaryBtn inline-block bg-[#00A3FF]  py-[10px] w-full text-center text-[16px] font-normal leading-[19px] text-[#fff] rounded-[8px]'>
+                                        Qoshish
+                                    </button>
+
                                 </div>
                             </div>
                         </div>
@@ -95,34 +111,15 @@ export default function Royxat() {
             <footer className='bg-[#F3F3F4] fixed bottom-0 w-full'>
                 <div className="container bg-[#F3F3F4]">
                     <div className="bottomDiv fixed bottom-[111px] left-auto right-auto min-w-[385px] bg-[#fff]   z-50">
-
-                        <div className="bg-[#00A3FF] rounded-[10px] py-[12px] px-[10px]">
-                            <span className='flex items-center justify-between mb-[7px]'>
-                                <p className='text-[16px] font-normal leading-[20px] text-[#fff]'>Umumiy ishlar:</p>
-                                <p className='text-[15px]  leading-[20px] text-[#14F10F] font-semibold'>Umumiy {totalJobs}</p>
-                            </span>
-                            <span className='flex items-center justify-between !mb-[11px]'> {/* 11px ga o'zgartirdim */}
-                                <p className='text-[16px] font-normal leading-[20px] text-[#fff]'>Umumiy narxi:</p>
-                                <p className='text-[16px] font-normal leading-[20px]  text-[#fff]'>250 000</p>
-                            </span>
-                        </div>
-
-                        <button className='min-w-[385px] block bg-[#00A3FF] mt-[11px] rounded-[10px] py-[12px] px-[10px]  text-[16px] font-normal leading-[20px] text-[#fff]'>
+                        {/* ... */}
+                        <button onClick={handleSave} className='min-w-[385px] block bg-[#00A3FF] mt-[11px] rounded-[10px] py-[12px] px-[10px]  text-[16px] font-normal leading-[20px] text-[#fff]'>
                             Saqlash
-
                         </button>
-
                     </div>
                     <div className="icon_box min-w-[385px] flex items-center justify-between py-[20px] mx-auto ">
-
                         <Link to="../Tarix"><MdHistory className='text-[48px] hover:bg-[#00A3FF] transition-[2s] rounded-[100%] py-1 px-1' /></Link>
-
-
                         <CiHome className='text-[48px] hover:bg-[#00A3FF] rounded-[100%] py-1 px-1' />
-
-
                         <Link to="../Profile"><CiUser className='text-[48px] hover:bg-[#00A3FF] rounded-[100%] py-1 px-1' /></Link>
-
                     </div>
                 </div>
             </footer>
