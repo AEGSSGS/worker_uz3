@@ -36,36 +36,36 @@ export default function Royxat() {
             <center className="App pt-[13px]  min-h-[100vh]">
                 <div className="todo_wrapper">
                     <div className="sticky top-0 bg-[#fff] w-full">
-                    <div className="container ">
-                        <h1 className='text-[24px] font-normal leading-[30px] mb-[7px]'>Ishlar royxati</h1>
-                        <div className="todo_input inline-flex items-start flex-col justify-center mx-auto mb-[7px]">
-                            <div className="todo_input_item">
-                                <label htmlFor=""></label>
-                                <select name="" id="" value={newTitle} onChange={(e) => setnewTitle(e.target.value)} className='min-w-[387px] bg-[#F3F3F4] py-[10px] pl-[14px] rounded-[8px] mb-[11px]' required>
-                                    <option value="ish1" className='!opacity-[30]'>Ishni tanlang</option>
-                                    <option value="Stol burchagini kesib chiqi...">Stol burchagini kesib chiqi...</option>
-                                    <option value="Stol burchagini kesib chiqi...">Stol burchagini kesib chiqi...</option>
-                                </select>
-
-                            </div>
-                            <div className="flex items-center gap-[12px]">
-                                <div className="todo_input_item ">
-                                    <input type="number" value={newDescription} onChange={(e) => setnewDescription(e.target.value)} placeholder='Soni' className='min-w-[178px] py-[10px] pl-[14px] bg-[#F3F3F4] rounded-[8px]' required />
-                                </div>
+                        <div className="container ">
+                            <h1 className='text-[24px] font-normal leading-[30px] mb-[7px]'>Ishlar royxati</h1>
+                            <div className="todo_input inline-flex items-start flex-col justify-center mx-auto mb-[7px]">
                                 <div className="todo_input_item">
-                                    <button type='submit' onClick={handleaddtodo} className='PrimaryBtn inline-block bg-[#00A3FF] min-w-[178px] py-[10px] px-[61px] text-[16px] font-normal leading-[19px] text-[#fff] rounded-[8px]'>
-                                        Qoshish
-                                    </button>
+                                    <label htmlFor=""></label>
+                                    <select name="" id="" value={newTitle} onChange={(e) => setnewTitle(e.target.value)} className='min-w-[387px] bg-[#F3F3F4] py-[10px] pl-[14px] rounded-[8px] mb-[11px]' required>
+                                        <option value="ish1" className='!opacity-[30]'>Ishni tanlang</option>
+                                        <option value="Stol burchagini kesib chiqi...">Stol burchagini kesib chiqi...</option>
+                                        <option value="Stol burchagini kesib chiqi...">Stol burchagini kesib chiqi...</option>
+                                    </select>
+
+                                </div>
+                                <div className="grid  place-items-center grid-cols-2 gap-[12px]">
+                                    <div className="todo_input_item ">
+                                        <input type="number" value={newDescription} onChange={(e) => setnewDescription(e.target.value)} placeholder='Soni' className=' py-[10px] pl-[14px] bg-[#F3F3F4] rounded-[8px]' required />
+                                    </div>
+                                    <div className="todo_input_item">
+                                        <button type='submit' onClick={handleaddtodo} className='PrimaryBtn inline-block bg-[#00A3FF]  py-[10px] px-[61px] text-[16px] font-normal leading-[19px] text-[#fff] rounded-[8px]'>
+                                            Qoshish
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    </div>
-                    <div className="bg-[#F3F3F4]">
-                                {allTodos.map((item, index) => {
-                                    return (
-                        <div className="container">
-                            <div className="todo_list pt-[7px] w-auto  max-h-[50vh] overflow-y-auto">
+                    <div className="bg-[#F3F3F4] !h-[43vh] overflow-y-auto">
+                        {allTodos.map((item, index) => {
+                            return (
+                                <div className="container">
+                                    <div className="todo_list pt-[7px] w-auto  ">
                                         <div className="todo_list_item w-full block  bg-[#fff] py-[10px] px-[10px] rounded-[8px] mb-[17px] " key={index}>
 
                                             <div className="inline-flex items-start gap-[18px] justify-between ">
@@ -83,11 +83,11 @@ export default function Royxat() {
                                             </div>
 
                                         </div>
-                            </div>
+                                    </div>
 
-                        </div>
-                                    )
-                                })}
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>
 
@@ -107,8 +107,8 @@ export default function Royxat() {
                             </span>
                         </div>
 
-                        <button  className='min-w-[385px] block bg-[#00A3FF] mt-[11px] rounded-[10px] py-[12px] px-[10px]  text-[16px] font-normal leading-[20px] text-[#fff]'>
-                        Saqlash
+                        <button className='min-w-[385px] block bg-[#00A3FF] mt-[11px] rounded-[10px] py-[12px] px-[10px]  text-[16px] font-normal leading-[20px] text-[#fff]'>
+                            Saqlash
 
                         </button>
 
