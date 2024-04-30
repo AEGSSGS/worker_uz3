@@ -111,10 +111,22 @@ export default function Royxat() {
             <footer className='bg-[#F3F3F4] fixed bottom-0 w-full'>
                 <div className="container bg-[#F3F3F4]">
                     <div className="bottomDiv fixed bottom-[111px] left-auto right-auto min-w-[385px] bg-[#fff]   z-50">
-                        {/* ... */}
+
+                        <div className="bg-[#00A3FF] rounded-[10px] py-[12px] px-[10px]">
+                            <span className='flex items-center justify-between mb-[7px]'>
+                                <p className='text-[16px] font-normal leading-[20px] text-[#fff]'>Umumiy ishlar:</p>
+                                <p className='text-[15px]  leading-[20px] text-[#14F10F] font-semibold'>Umumiy {totalJobs}</p>
+                            </span>
+                            <span className='flex items-center justify-between !mb-[11px]'> {/* 11px ga o'zgartirdim */}
+                                <p className='text-[16px] font-normal leading-[20px] text-[#fff]'>Umumiy narxi:</p>
+                                <p className='text-[16px] font-normal leading-[20px]  text-[#fff]'>250 000</p>
+                            </span>
+                        </div>
+
                         <button onClick={handleSave} className='min-w-[385px] block bg-[#00A3FF] mt-[11px] rounded-[10px] py-[12px] px-[10px]  text-[16px] font-normal leading-[20px] text-[#fff]'>
                             Saqlash
                         </button>
+
                     </div>
                     <div className="icon_box min-w-[385px] flex items-center justify-between py-[20px] mx-auto ">
                         <Link to="../Tarix"><MdHistory className='text-[48px] hover:bg-[#00A3FF] transition-[2s] rounded-[100%] py-1 px-1' /></Link>
