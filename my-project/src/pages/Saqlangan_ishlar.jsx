@@ -25,7 +25,7 @@ export default function Saqlangan_ishlar({onSave}) {
                     <h1 className='text-[24px] font-normal leading-[30px] mb-[24px]'>
                         Ishlar tarixi
                     </h1>
-                    <form action=""> <div className="relative"> <input type="search" placeholder='search' className='w-full bg-[#F3F3F4] py-[10px] pl-[14px] rounded-[8px] mb-[11px] pr-[40px]'/> <button type="submit" className="absolute top-1/2 transform -translate-y-1/2 right-[14px]"> <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path> </svg> </button> </div> </form>
+                   <form action=""> <div class="relative"> <input type="search" placeholder='search' class='w-full bg-[#F3F3F4] py-[10px] pl-[14px] rounded-[8px] mb-[11px] pr-[40px]'/> <button type="submit" class="absolute top-1/2 transform -translate-y-1/2 right-[14px]"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path> </svg> </button> </div> </form>
                     <div className="grid place-items-center gap-[15px] grid-cols-3 place-content-between ">
                         <a className="inline-block w-full  py-[7px] bg-[#00A3FF] text-white rounded-[5px] cursor-pointer">
                             2022-dekabr
