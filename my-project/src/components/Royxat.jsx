@@ -48,15 +48,15 @@ export default function Royxat() {
                                     </select>
 
                                 </div>
-                                <div className="grid  place-items-center grid-cols-2 gap-[12px]">
-                                    <div className="todo_input_item ">
-                                        <input type="number" value={newDescription} onChange={(e) => setnewDescription(e.target.value)} placeholder='Soni' className=' py-[10px] pl-[14px] bg-[#F3F3F4] rounded-[8px]' required />
-                                    </div>
-                                    <div className="todo_input_item">
-                                        <button type='submit' onClick={handleaddtodo} className='PrimaryBtn inline-block bg-[#00A3FF]  py-[10px] px-[61px] text-[16px] font-normal leading-[19px] text-[#fff] rounded-[8px]'>
+                                <div className="grid  place-items-center grid-cols-2 place-content-between gap-[23px]">
+                                    
+                                        <input type="number" value={newDescription} onChange={(e) => setnewDescription(e.target.value)} placeholder='Soni' className=' py-[10px] w-full text-center bg-[#F3F3F4] rounded-[8px]' required />
+                                    
+                                    
+                                        <button type='submit' onClick={handleaddtodo} className='PrimaryBtn inline-block bg-[#00A3FF]  py-[10px] w-full text-center text-[16px] font-normal leading-[19px] text-[#fff] rounded-[8px]'>
                                             Qoshish
                                         </button>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
