@@ -110,8 +110,8 @@ export default function Royxat() {
             </center>
             <footer className='bg-[#F3F3F4] fixed bottom-0 w-full'>
                 <div className="container bg-[#F3F3F4]">
-                    <div className="bottomDiv fixed bottom-[111px] left-auto right-auto min-w-[385px] bg-[#fff]   z-50">
-
+                    <div className="bottomDiv fixed bottom-[80px] left-auto right-auto min-w-[385px] bg-[#fff]   z-50">
+                    <form action=""> <div class="relative"> <input type="search" placeholder='search' class='w-full bg-[#F3F3F4] py-[10px] pl-[14px] rounded-[8px] mb-[11px] pr-[40px]'/> <button type="submit" class="absolute top-1/2 transform -translate-y-1/2 right-[14px]"> <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path> </svg> </button> </div> </form>
                         <div className="bg-[#00A3FF] rounded-[10px] py-[12px] px-[10px]">
                             <span className='flex items-center justify-between mb-[7px]'>
                                 <p className='text-[16px] font-normal leading-[20px] text-[#fff]'>Umumiy ishlar:</p>
@@ -128,10 +128,10 @@ export default function Royxat() {
                         </button>
 
                     </div>
-                    <div className="icon_box min-w-[385px] flex items-center justify-between py-[20px] mx-auto ">
-                        <Link to="../Tarix"><MdHistory className='text-[48px] hover:bg-[#00A3FF] transition-[2s] rounded-[100%] py-1 px-1' /></Link>
-                        <CiHome className='text-[48px] hover:bg-[#00A3FF] rounded-[100%] py-1 px-1' />
-                        <Link to="../Profile"><CiUser className='text-[48px] hover:bg-[#00A3FF] rounded-[100%] py-1 px-1' /></Link>
+                    <div className="icon_box min-w-[385px] flex items-center justify-between py-[10px] mx-auto ">
+                        <Link to="../Tarix"><MdHistory className='text-[48px] active:bg-[#00A3FF] transition-[2s] rounded-[100%] py-1 px-1' /></Link>
+                        <CiHome className='text-[48px] active:bg-[#00A3FF] rounded-[100%] py-1 px-1' />
+                        <Link to="../Profile"><CiUser className='text-[48px] active:bg-[#00A3FF] rounded-[100%] py-1 px-1' /></Link>
                     </div>
                 </div>
             </footer>
