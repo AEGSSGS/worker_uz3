@@ -121,12 +121,7 @@ export default function Royxat() {
                                 <p className='text-[16px] font-normal leading-[20px] text-[#fff]'>Umumiy narxi:</p>
                                 <p className='text-[16px] font-normal leading-[20px]  text-[#fff]'>250 000</p>
                             </span>
-                        </div>
-
-                        <button onClick={handleSave} className='min-w-[385px] block bg-[#00A3FF] mt-[11px] rounded-[10px] py-[12px] px-[10px]  text-[16px] font-normal leading-[20px] text-[#fff]'>
-                            Saqlash
-                        </button>
-
+                        </div>                      
                     </div>
                     <div className="icon_box min-w-[385px] flex items-center justify-between py-[10px] mx-auto ">
                         <Link to="../Tarix"><MdHistory className='text-[48px] active:bg-[#00A3FF] transition-[2s] rounded-[100%] py-1 px-1' /></Link>
